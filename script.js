@@ -124,7 +124,7 @@ function atualizarPainelPrincipal(registro) {
   // Extrai os campos (compatível com diferentes nomes de chave)
   const temp    = parseFloat(registro.temperatura ?? registro.temp ?? registro.value ?? 0);
   const origem  = registro.origem ?? registro.source ?? registro.device ?? '—';
-  const dataHora = registro.data_hora ?? registro.timestamp ?? registro.created_at ?? null;
+  const dataHora = registro.criado_em ?? registro.data_hora ?? registro.timestamp ?? registro.created_at ?? null;
 
   /* ── Temperatura ── */
   els.tempValue.textContent = temp.toFixed(1);
@@ -176,7 +176,7 @@ function renderizarTabela(registros) {
     const temp    = parseFloat(reg.temperatura ?? reg.temp ?? reg.value ?? 0);
     const id      = reg.id ?? reg._id ?? (registros.length - idx);
     const origem  = reg.origem ?? reg.source ?? reg.device ?? '—';
-    const dataHora = reg.data_hora ?? reg.timestamp ?? reg.created_at ?? null;
+    const dataHora = reg.criado_em ?? reg.data_hora ?? reg.timestamp ?? reg.created_at ?? null;
     const normal  = temp <= TEMP_LIMIT;
 
     const tr = document.createElement('tr');
