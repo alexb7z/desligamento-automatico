@@ -15,7 +15,7 @@
 
 /* ── Configurações da API ── */
 const API_URL   = 'https://epnlg6d8b5.execute-api.us-east-1.amazonaws.com/temperaturas';
-const API_TOKEN = 'ALEXBRUNO';
+const API_TOKEN = 'ERRADO';
 
 /* Limite de temperatura normal (≤ 8°C = normal; > 8°C = atenção) */
 const TEMP_LIMIT = 8;
